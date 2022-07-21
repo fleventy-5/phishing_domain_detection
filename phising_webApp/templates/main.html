@@ -1,0 +1,47 @@
+<!Doctype html>
+
+<html>
+<head>
+	<title>Phising</title>
+	<style>
+form {
+    margin: auto;
+    width: 35%;
+}.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+
+h1{
+	text-align:center;
+}
+</style>
+</head>
+<body>
+	<h1>Phishing Or Not</h1>
+	<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+        URL:
+        <input name="url" type="url" required>
+        <br>
+        
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+            <p><br> Prediction Results:</p>
+            <p style="font-size:20px"><b><i>Site:</i></b>{{ site }}</p><br>
+            {% if result %}
+           {% for key,val in result.items() %}
+            <br><b>{{key}}</b>:{{val}}
+            {% endfor %}
+            {% endif %}
+            
+    
+</div>
+</body>
+</html>
