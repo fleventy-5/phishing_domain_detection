@@ -1,5 +1,5 @@
 # Phishing Domain Detection
-Implementation of Phishing domain Detection using Machine laearning
+Implementation of Phishing domain Detection using Machine learning
 
 ## Datasets  
 Paper Link: - https://www.sciencedirect.com/science/article/pii/S2352340920313202  <br />
